@@ -1,0 +1,198 @@
+* Window Object - Playground
+** Check window size:
+
+#+begin_src js :results output
+
+        window.
+
+        innerWidth
+        outerWidth
+        innerheight
+        outerwidth
+        screen
+        open // Open new window tab
+
+        var myWindow = window.open("", "", "width=200, height=200");
+        myWindow.moveTo(400,300);
+        myWindow.close()
+        window.history()
+        window.location.href
+
+    console.log(document);   // HTML representation
+    console.dir(document);   // JS representation
+
+#+end_src
+
+#+RESULTS:
+** Console Tables:
+
+#+begin_src js :results output
+
+    // console tables
+    console.table([1,2,3,4]);
+  
+#+end_src
+
+** Console Count:
+
+#+begin_src js :results output
+
+  console.count();
+  console.count();
+  console.count();
+  console.count();
+
+  for(let i=0; i < 5; i++) {
+    console.count('I have been called') }
+
+
+#+end_src
+
+#+RESULTS:
+: default: 1
+: default: 2
+: default: 3
+: default: 4
+: I have been called: 1
+: I have been called: 2
+: I have been called: 3
+: I have been called: 4
+: I have been called: 5
+
+** Console Groups:
+
+#+begin_src js :results output
+  #+begin_src js :results output
+
+    const dogName = {
+    name: 'Paw',
+    surname: 'Patrol'
+  }
+  console.log();
+  console.log(dogName);
+  console.log();
+  console.table(dogName);
+
+    // console.group()
+  console.group('Dogs');
+  console.log('German Shepard');
+  console.log('Irish Wolfhound');
+  console.groupEnd();
+
+  // console.groupCollapsed()
+  console.groupCollapsed('Dogs');
+  console.log('German Shepard');
+  console.log('Irish Wolfhound');
+  console.groupEnd();
+
+  // console.groupCollapsed()
+  console.groupCollapsed('Animals');
+  console.group('Dogs');
+  console.log('German Shepard');
+  console.log('Irish Wolfhound');
+  console.groupEnd();
+  console.group('Cats');
+  console.log('Siamese');
+  console.log('Rag');
+  console.groupEnd();
+
+#+end_src
+
+#+RESULTS:
+#+begin_example
+Dogs
+  German Shepard
+  Irish Wolfhound
+Dogs
+  German Shepard
+  Irish Wolfhound
+Animals
+  Dogs
+    German Shepard
+    Irish Wolfhound
+  Cats
+    Siamese
+    Rag
+#+end_example
+
+** Console Time:
+
+#+begin_src js :results output
+
+  console.time('math timer');
+  console.log(2345234523452345*224351234512);
+  console.timeEnd('math timer');
+
+#+end_src
+
+#+RESULTS:
+: 5.261562605566956e+26
+: math timer: 2.031ms
+
+** Console Assert:
+
+#+begin_src js :results output
+
+  // console.assert( boolean, text);
+
+  let age = 35;
+  console.assert(age < 50, 'Access denied. You are too young to enter.');
+
+#+end_src
+
+#+RESULTS:
+
+** Substitutions & Color Console
+*** Just like c language
+       %s string
+       %d integer
+       %c css
+       %o object
+**** 
+
+#+begin_src js :results output
+
+    console.log('hi %s', 'there');
+
+    var number = 33;
+    var color = 'green';
+
+    console.log('%d %s apples', number, color);
+
+    // Color the console
+  console.log('I am %cbutton', 'color: blue; background-color: pink; padding: 2px 3px; border-radius: 2px');
+
+#+end_src
+
+#+RESULTS:
+: hi there
+: 33 green apples
+: I am button
+
+** Template Literals
+
+#+begin_src js :results output
+
+  var number = 33;
+  var color = 'green';
+
+  console.log(`${number} ${color} apples`);
+
+#+end_src
+
+#+RESULTS:
+: 33 green apples
+
+* Button Click 
+
+#+begin_src js :results output
+
+  <button id="button" style="background: yellow">Push Me</button>
+
+
+     /* Identify: */         let button = document.getElementById("button");
+     /* When: */             button.onclick=()=> {
+     /* Define Action: */    button.innerHTML = "I've been clicked"
+     };
+
+#+end_src

@@ -142,7 +142,7 @@ Animals
 
 #+RESULTS:
 
-** Substitutions & Color Console
+** Substitutions %s syntax
 *** Just like c language
        %s string
        %d integer
@@ -159,8 +159,6 @@ Animals
 
     console.log('%d %s apples', number, color);
 
-    // Color the console
-  console.log('I am %cbutton', 'color: blue; background-color: pink; padding: 2px 3px; border-radius: 2px');
 
 #+end_src
 
@@ -169,7 +167,16 @@ Animals
 : 33 green apples
 : I am button
 
-** Template Literals
+** Color Console 
+
+#+begin_src js :results output
+
+  // Color the console
+  console.log('I am %cbutton', 'color: blue; background-color: pink; padding: 2px 3px; border-radius: 2px');
+
+#+end_src
+
+** Template Literals ${} syntax
 
 #+begin_src js :results output
 

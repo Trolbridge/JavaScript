@@ -190,6 +190,18 @@ Animals
 #+RESULTS:
 : 33 green apples
 
+** Back-End Folder & File Structure
+
+- config folder
+- models folder
+- routes folder
+- views folder
+- public folder
+*** index.html
+*** package.json
+*** css folder
+*** js folder
+
 * Button Click 
 
 #+begin_src js :results output
@@ -201,5 +213,33 @@ Animals
      /* When: */             button.onclick=()=> {
      /* Define Action: */    button.innerHTML = "I've been clicked"
      };
+
+#+end_src
+
+* Keyboard Listener
+** MDN:
+#+begin_src js :results output
+
+  const log = document.getElementById('button');
+
+  document.addEventListener('keydown', logkey);
+
+  function logkey(e) {
+    console.log(` ${e.code}`);
+    log.textContent += ` ${e.code}`;
+  }
+
+
+#+end_src
+
+** Reload with any key hit:
+
+#+begin_src js :results output
+
+  document.addEventListener('keydown', logkey);
+
+  function logkey() {
+    location.reload();
+  }
 
 #+end_src

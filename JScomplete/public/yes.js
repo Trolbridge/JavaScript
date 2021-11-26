@@ -55,3 +55,11 @@ console.groupEnd();
 
   var age = 35;
   console.assert(age > 50, 'Access denied. You are too young to enter.');
+
+document.addEventListener('keydown', logkey);
+
+function logkey() {
+  location.reload();
+}
+
+

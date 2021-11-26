@@ -258,3 +258,40 @@ Animals
   }
 
 #+end_src
+
+* Javascript Properties
+
+Two ways to access the properties
+
+1. with the dot .                               value.x
+2. square brackets []                       value[x]
+   
+* Double-precision 64-bit binary format 
+   C-u C-c C-l add link to file
+   C-c C-x C-v org-toggle-inline-images
+   #+CAPTION This is the caption for the next pic
+#+ATTR_ORG: :width 700
+   [[file:1236px-IEEE_754_Double_Floating_Point_Format.svg.png]]
+
+* Display Images 
+   C-u C-c C-l add link to file
+   C-c C-x C-v org-toggle-inline-images
+   #+CAPTION This is the caption for the next pic
+   #+NAME:      fig:IMG_0013.PNG
+   #+ATTR_ORG: :width 300
+   #+attr_html: :width 300
+   #+attr_latex: :width 300
+
+
+   
+* isNaN:
+
+#+begin_src js :results output
+
+  let value = 'Dennis';
+  console.log(isNaN(value));
+
+#+end_src
+
+#+RESULTS:
+: true

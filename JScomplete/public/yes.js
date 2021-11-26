@@ -66,3 +66,9 @@ function alertMe() {
   document.write('<br>');
   document.write('Hi BB !!! ');
 }
+
+let person = {name: "Wally", age: 41};
+
+person = null;
+
+person

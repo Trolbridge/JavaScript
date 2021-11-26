@@ -204,6 +204,7 @@ Animals
 
 * Button Click 
 
+** First Example:
 #+begin_src js :results output
 
   <button id="button" style="background: yellow">Push Me</button>
@@ -213,6 +214,20 @@ Animals
      /* When: */             button.onclick=()=> {
      /* Define Action: */    button.innerHTML = "I've been clicked"
      };
+
+#+end_src
+
+** Second Example:
+#+begin_src js :results output
+
+    <button onclick="alertMe()">click me</button>
+
+  function alertMe() {
+    // alert('Hi');
+    document.write('<br>');
+    document.write('Hi BB !!! ');
+  }
+
 
 #+end_src
 

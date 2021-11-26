@@ -61,5 +61,8 @@ document.addEventListener('keydown', logkey);
 function logkey() {
   location.reload();
 }
-
-
+function alertMe() {
+  // alert('Hi');
+  document.write('<br>');
+  document.write('Hi BB !!! ');
+}
